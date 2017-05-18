@@ -1,23 +1,98 @@
 class PlayingCard
   # initialize
+  attr_reader :rank, :suit, :face
+  def initialize(args)
+    @rank = args[:rank]
+    @suit = args[:suit]
+    @face = @rank + @suit
+  end
+
+  def rank
+    @card = @rank
+  end
+
+  def suit
+    @card = @suit
+  end
+
+  def face
+    @face
+  end
+
+  def to_s
+    @face
+  end
+
 end
 
 class CardDeck
   # initialize
+  attr_accessor
+  def initialize(shuffled=true)
+
+  end
+
+  def cards
+  end
+
+  def to_s
+  end
+
+  def shuffle
+    @cards.shuffle!
+  end
+
+  def generate_cards(decks=1)
+    ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    suits = ["C", "D", "H", "S"]
+
 end
 
 class HandOfCards
   # initialize
+  attr_accessor :name, :hunger_level, :eat
+  def initialize
+  end
+
+  def cards
+  end
+
+  def to_s
+  end
+
+  def shuffle
+  end
+
+  def draw
+  end
+
+  def draw_one
+  end
+
+  def push
+  end
+
+  def any?
+  end
+
+  def take!
+  end
 end
 
 class CardPlayer
   # initialize
+  attr_accessor :name, :hunger_level, :eat
+  def initialize
+  end
+  def hand
+  end
 end
 
 
 # Driver Code
 if __FILE__ == $0
   puts "This will only print if you run `ruby go_fish.rb`"
+  puts args = {suit: "king"}
   # deck = CardDeck.new
   # # # puts "cards: #{deck.cards}"
   # # # puts "cards: #{deck}"
